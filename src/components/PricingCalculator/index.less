@@ -1,0 +1,560 @@
+.Calculator__top-content {
+  display: -webkit-box;
+  display: flex;
+}
+.Calculator__form {
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.Calculator__control-panel {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.Calculator__column {
+  position: relative;
+  max-width: 520px;
+  // + {
+  // 	.Calculator__column {
+  // 		margin-top: 20px;
+  // 	}
+  // }
+}
+.CalculatorV2Container {
+  .Calculator__column {
+    max-width: none;
+  }
+}
+.embed {
+  .Calculator__column {
+    max-width: none;
+    margin-top: 0;
+  }
+  .CalculatorRowGroup {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    // + {
+    // 	.CalculatorRowGroup {
+    // 		margin-top: 0;
+    // 	}
+    // }
+  }
+  .CalculatorRowGroup__name {
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    font-weight: 500;
+    text-align: center;
+    background: #fff;
+  }
+  .CalculatorRow__name {
+    margin-right: 0;
+  }
+  .CalculatorRow {
+    &:last-child {
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
+}
+.Calculator--hasOneColumn {
+  .Calculator__column {
+    width: 100%;
+  }
+}
+.SsrLoader {
+  position: relative;
+  // + {
+  // 	.SsrLoader {
+  // 		margin-top: 25px;
+  // 	}
+  // }
+}
+.SsrLoader__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+.CalculatorRowGroup {
+  padding: 0;
+  margin: 0;
+}
+.CalculatorRowGroup__name {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 13px 0;
+  padding-left: 16px;
+  color: #333;
+  background: #e6e6e6;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.CalculatorRow--hasErrorMessages.CalculatorRow--focused {
+  height: 110px;
+  .CalculatorRow__show-menu {
+    height: 109px;
+  }
+  .CalculatorRow__info-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 30px);
+    height: 60px;
+    padding-left: 16px;
+    font-size: 14px;
+    color: #989c9d;
+  }
+}
+.CalculatorRow--readOnly.CalculatorRow--focused {
+  height: 110px;
+  .CalculatorRow__show-menu {
+    height: 109px;
+  }
+  .CalculatorRow__info-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 30px);
+    height: 60px;
+    padding-left: 16px;
+    font-size: 14px;
+    color: #989c9d;
+  }
+}
+.CalculatorRow__input-box {
+  display: -webkit-box;
+  display: flex;
+  height: 50px;
+  -webkit-box-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-right: 8px;
+  margin-left: 16px;
+  height: 50px;
+  &:not(.CalculatorRow__input-box--hasMultiUnits) {
+    overflow: hidden;
+  }
+}
+.CalculatorRow__input-box.CalculatorRow__input-box--hasMultiUnits {
+  margin-right: 0;
+}
+.CalculatorRow__unit {
+  height: 50px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  margin-right: 8px;
+  color: #555;
+  -webkit-transition: 0.4s cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: 0.4s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+.CalculatorRow__name {
+  margin-right: 10px;
+  color: #555;
+  cursor: pointer;
+}
+.CalculatorRow__name--hasHelp {
+  border-bottom: 1px dotted #989c9d;
+}
+.CalculatorRow {
+  &:not(.CalculatorRow--readOnly) {
+    .CalculatorRow__input--actionsShowed {
+      z-index: 1;
+      -webkit-transform: translateX(-125px);
+      transform: translateX(-125px);
+    }
+    .CalculatorRow__name--actionsShowed {
+      z-index: 1;
+      -webkit-transform: translateX(-125px);
+      transform: translateX(-125px);
+    }
+    .CalculatorRow__unit--actionsShowed {
+      z-index: 1;
+      -webkit-transform: translateX(-125px);
+      transform: translateX(-125px);
+    }
+  }
+  &:first-child {
+    .CalculatorRow__show-menu {
+      border-top-right-radius: 4px;
+    }
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #f7fafc;
+  }
+  &:last-child {
+    .CalculatorRow__show-menu {
+      border-bottom-right-radius: 4px;
+    }
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #f7fafc;
+  }
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  background-color: #f7fafc;
+  &:not(:last-child) {
+    border-bottom: 1px solid #edf2f7;
+  }
+}
+.CalculatorRow__unit-select {
+  height: 100%;
+  .Select-control {
+    display: block;
+    height: 50px;
+    overflow: visible;
+    background: 0 0;
+    border: 0;
+    box-shadow: none;
+    .Select-input {
+      &:focus {
+        background: 0 0;
+      }
+    }
+  }
+  .Select-arrow-zone {
+    display: none;
+  }
+  .Select-placeholder {
+    position: static;
+    display: -webkit-box;
+    display: flex;
+    height: 50px;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-right: 0;
+    padding-left: 0;
+    overflow: visible;
+    color: #555;
+  }
+  .Select-value {
+    position: static;
+    display: -webkit-box;
+    display: flex;
+    height: 50px;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-right: 0;
+    padding-left: 0;
+    overflow: visible;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+  }
+  &:not(.Select--multi) {
+    > .Select-control {
+      .Select-value {
+        position: static;
+        position: static;
+        display: -webkit-box;
+        display: -webkit-box;
+        display: flex;
+        display: flex;
+        height: 50px;
+        height: 50px;
+        -webkit-box-align: center;
+        -webkit-box-align: center;
+        align-items: center;
+        align-items: center;
+        padding-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+        padding-left: 0;
+        overflow: visible;
+        overflow: visible;
+      }
+    }
+  }
+  .Select-value-label {
+    color: #007cb2 !important;
+    text-decoration: underline;
+    cursor: pointer;
+    &:after {
+      content: " ▾";
+    }
+  }
+  .Select.has-value.Select--single {
+    > .Select-control {
+      .Select-value {
+        .Select-value-label {
+          color: #007cb2 !important;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .Select.has-value.is-pseudo-focused.Select--single {
+    > .Select-control {
+      .Select-value {
+        .Select-value-label {
+          color: #007cb2 !important;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .Select--single {
+    > .Select-control {
+      .Select-value {
+        color: #555;
+      }
+    }
+  }
+}
+.CalculatorRow__value-select {
+  height: 100%;
+  .Select-control {
+    display: block;
+    height: 50px;
+    overflow: visible;
+    background: 0 0;
+    border: 0;
+    box-shadow: none;
+    .Select-input {
+      &:focus {
+        background: 0 0;
+      }
+    }
+  }
+  .Select-arrow-zone {
+    display: none;
+  }
+  .Select-placeholder {
+    position: static;
+    display: -webkit-box;
+    display: flex;
+    height: 50px;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-right: 0;
+    padding-left: 0;
+    overflow: visible;
+    color: #555;
+  }
+  .Select-value {
+    position: static;
+    display: -webkit-box;
+    display: flex;
+    height: 50px;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-right: 0;
+    padding-left: 0;
+    overflow: visible;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+  }
+  &:not(.Select--multi) {
+    > .Select-control {
+      .Select-value {
+        position: static;
+        position: static;
+        display: -webkit-box;
+        display: -webkit-box;
+        display: flex;
+        display: flex;
+        height: 50px;
+        height: 50px;
+        -webkit-box-align: center;
+        -webkit-box-align: center;
+        align-items: center;
+        align-items: center;
+        padding-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+        padding-left: 0;
+        overflow: visible;
+        overflow: visible;
+      }
+    }
+  }
+  .Select-value-label {
+    color: #007cb2 !important;
+    text-decoration: underline;
+    cursor: pointer;
+    &:after {
+      content: " ▾";
+    }
+  }
+  .Select.has-value.Select--single {
+    > .Select-control {
+      .Select-value {
+        .Select-value-label {
+          color: #007cb2 !important;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .Select.has-value.is-pseudo-focused.Select--single {
+    > .Select-control {
+      .Select-value {
+        .Select-value-label {
+          color: #007cb2 !important;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .Select--single {
+    > .Select-control {
+      .Select-value {
+        color: #555;
+      }
+    }
+  }
+}
+.CalculatorRow__unit-select.is-focused {
+  &:not(.is-open) {
+    .Select-control {
+      box-shadow: none;
+    }
+  }
+}
+.CalculatorRow__value-select.is-focused {
+  &:not(.is-open) {
+    .Select-control {
+      box-shadow: none;
+    }
+  }
+}
+.CalculatorRow__show-menu {
+  display: -webkit-box;
+  display: flex;
+  width: 30px;
+  height: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  align-items: center;
+  color: #989c9d;
+  background: #f0f0f0;
+}
+.embed-without-row-controls {
+  .CalculatorRow__show-menu {
+    display: none;
+  }
+}
+.CalculatorRow--readOnly {
+  background: #f0f0f0;
+}
+.CalculatorRow--additionalInfoInline {
+  padding: 0 16px;
+  padding-bottom: 20px;
+  height: auto;
+  cursor: auto;
+}
+.CalculatorRow__input {
+  width: 60px;
+  height: 48px;
+  -webkit-box-flex: 1;
+  flex: auto;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: right;
+  background: 0 0;
+  border: 0;
+  outline: 0;
+  color: #444;
+  &::-ms-clear {
+    width: 0;
+    height: 0;
+  }
+}
+.CalculatorRow__multi-input__part-input {
+  width: 60px;
+  height: 48px;
+  -webkit-box-flex: 1;
+  flex: auto;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: right;
+  background: 0 0;
+  border: 0;
+  outline: 0;
+}
+.CalculatorRow__read-only-value {
+  width: 60px;
+  height: 48px;
+  -webkit-box-flex: 1;
+  flex: auto;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: right;
+  background: 0 0;
+  border: 0;
+  outline: 0;
+  color: #888;
+}
+@media (min-width: 1200px) {
+  .CalculatorV2Container {
+    .Calculator__form {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+    }
+    .Calculator__column {
+      width: 100%;
+    }
+  }
+  .Calculator__control-panel {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+  }
+  .Calculator__form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+  }
+  .Calculator__column {
+    width: 100%;
+  }
+  .Calculator--hasOneColumn {
+    .Calculator__column {
+      width: 100%;
+    }
+  }
+}

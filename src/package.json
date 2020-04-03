@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "antd": "latest",
+    "moment": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "keywords": [],
+  "name": "code-commit-message-generator",
+  "description": ""
+}

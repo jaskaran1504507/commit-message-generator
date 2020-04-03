@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "antd": "latest",
+    "moment": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "keywords": [],
+  "name": "code-commit-message-generator",
+  "description": "",
+  "version": "0.0.7",
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

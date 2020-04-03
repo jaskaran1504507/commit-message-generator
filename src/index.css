@@ -1,0 +1,31 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.App {
+  padding: 20px;
+}
+.fancy-tab{}
+.fancy-tab .ant-tabs .ant-tabs-left-bar .ant-tabs-tab {
+    text-align: left;
+}
+.fancy-tab .ant-tabs-vertical.ant-tabs-card.ant-tabs-left .ant-tabs-card-bar.ant-tabs-left-bar .ant-tabs-tab-active{
+    border-left: 2px solid #5c6ac4;
+    padding-bottom:1rem !important;
+    padding-top:1rem;
+    margin-bottom: 0 !important;
+    border-bottom: none;
+    border-radius: 0;
+    height:auto;
+    border-right: 1px solid #fff;
+}
+.fancy-tab .ant-tabs-vertical.ant-tabs-card.ant-tabs-left .ant-tabs-card-bar.ant-tabs-left-bar .ant-tabs-tab {
+    padding-bottom:1rem !important;
+    padding-top:1rem;
+    margin-bottom: 0 !important;
+    border-bottom: none;
+    border-radius: 0;
+    height:auto;
+}
